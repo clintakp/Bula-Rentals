@@ -1,0 +1,502 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li, form, label {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header styling */
+header {
+    background: #fefbfb;
+    color: #0f0f0f;
+    padding: 0.5rem 0;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo {
+    margin-left: 70px;
+}
+
+.logo img {
+    height: 80px;
+}
+
+nav {
+    position: center;
+    bottom: 0;
+    right: 0;
+}
+
+.nav-links {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 10px;
+    padding: 3px 10px; /* Padding inside each rectangle */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #323131;
+    font-size: 0.8rem;
+    display: block;
+}
+
+.nav-links li a:hover {
+    text-decoration: underline;
+    color: #e74c3c;
+}
+
+/* Hero section styling */
+
+.hero-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(aston-martin-hire-nz-rental-header-2589.jpg) no-repeat center center/cover;
+    width: 100%;
+    height: 600px;
+}
+
+.hero-content{
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h1{
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+
+.form-container {
+    background: rgba(81, 75, 75, 0.7);
+    padding: 50px;
+    border-radius: 40px;
+    max-width: 1200px; /* Max width for larger screens */
+    margin: auto;
+    display: flex;
+}
+
+.form-container form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.form-group:nth-child(5){
+    grid-column: span 4;
+}
+
+.form-group {
+    display: inline-block;
+    flex-direction: column;
+}
+
+.form-container form label {
+    color: #fefcfc;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    margin-left: 30px;
+}
+
+.form-container form input,
+.form-container form select {
+    margin-top: 15px ;
+    padding: 10px;
+    border-radius: 40px;
+    border: none;
+    font-size: 15px; /* Adjust the font size as needed */
+}
+
+.btn-primary {
+    grid-column: 2 / span 2; /* Span across all 4 columns */
+    padding: 10px 0;
+    font-size: 1.1rem;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* about-Section styling */
+
+.about-section
+{
+    background-color: #d9d9d90f;
+}
+
+.about-section h1 {
+    font-size: 2em;
+    color: #e74c3c;
+}
+
+.about-section p {
+    text-indent: 2%;
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    padding-bottom: 40px;
+}
+
+.about-section p1 {
+    text-indent: 2%;
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    padding-bottom: 40px;
+}
+
+.about-section h2 {
+    font-size: 2em;
+}
+
+.about-section h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-indent: 1%;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+/* Section styling */
+section {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.services-section, .contact-section {
+    background: #fff;
+}
+
+.services-section h1 {
+    color: #e74c3c;
+    font-size: 2rem;
+}
+.services-section h2, .about-section h2, .contact-section h2 {
+    margin-bottom: 1.5rem;
+}
+
+/* Services section styling */
+
+.services-section h2 {
+    margin-bottom: 1.5rem;
+}
+
+.services-section h3 {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.car img {
+    max-width: 100%;
+    height: 250px;
+    margin-bottom: 0.5rem;
+    border-radius: 15px;
+}
+
+.car {
+    display: inline-block; /* Align items horizontally */
+    width: 30%;
+    margin: 0 10px; /* Space between items */
+    vertical-align: top;
+    padding: 2rem 0;
+}
+
+.car h4 {
+    font-size: small;
+    text-align: left;
+    color: #e74c3c;
+}
+
+.car h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.car p {
+    text-align: left;
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 8%;
+}
+
+/* Hover effect for car boxes */
+.car:hover {
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 8px rgba(252, 245, 245, 0.1);
+    cursor: pointer;
+}
+
+.servicebook-btn, .viewfleetservice-btn {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.servicebook-btn {
+    background-color: #f41313;
+    color: #fff;
+    padding: 0.8rem 1rem;
+    border: none;
+    justify-items: auto;
+    cursor: pointer;
+    text-align: center;
+}
+
+.servicebook-btn:hover {
+    background-color: #0f0f0f;
+    color: #fff;
+}
+
+.viewfleetservice-btn {
+    background-color: transparent;
+    color: #f41313;
+    border-color: #cd2424bf;
+    margin-left: 30px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.viewfleetservice-btn:hover {
+    background-color: #f41313;
+    color: #fff;
+    border-color: #c10d0d;
+}
+
+/*Feedback Section styling*/
+.Feedback-Section {
+    background-color: #d4d0d000;
+}
+
+.Feedback-Section h1{
+    color: #f41313;
+    font-size: 2em;
+}
+
+.Feedback-Section h2 {
+    font-size: 2em;
+}
+
+.Feedback-Section p {
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    margin-bottom: 3em;
+}
+
+.cl-feedback img {
+    background: transparent;
+    max-width: 20%;
+    height: 50px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 15px;
+}
+
+.cl-feedback {
+    display: inline-block; /* Align items horizontally */
+    width: 30%;
+    margin: 0 10px; /* Space between items */
+    margin-bottom: 4rem;
+    margin-right: 5rem;
+    margin-left: 5rem;
+    text-align: center;
+    vertical-align: top;
+}
+
+.cl-feedback p {
+    text-align: left;
+}
+
+.cl-feedback h3 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.cl-feedback:hover {
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.445);
+    cursor: pointer;
+}
+
+.contact-section {
+    display: flex;
+    background-color: #fff;
+    max-width: 150rem;
+    box-shadow: 0 4px 8px rgb(174, 168, 168);
+    text-align: center;
+}
+
+.contact-image img {
+    width: 60%;
+    height: 100%;
+    margin-left: 2rem;
+}
+
+.contact-details {
+    text-align: center;
+    margin-left: 25em;
+    margin-bottom: 2%;
+}
+
+.contact-details h1 {
+    font-size: 2rem;
+    color: #ee1010;
+}
+
+.contact-details h2 {
+    font-size: 2rem;
+    color: #171616;
+}
+
+.contact-details p {
+    margin: 0.5rem 0;
+}
+
+.contact-details a {
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+.contact-button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.contact-button:hover {
+    background-color: #c10d0d;
+}
+
+form styling 
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    margin-bottom: 0.5rem;
+}
+
+form input, form select, form textarea {
+    width: 80%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #555;
+}
+
+/* Footer styling */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+}
+
+.footer-logo {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.footer-logo img {
+    height: 80px;
+    margin-bottom: 0.5rem;
+}
+
+.footer-logo p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-size: small;
+    margin-bottom: 3rem;
+}
+
+.footer-links {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+    justify-content: right;
+    margin-left: 18rem;
+}
+
+.footer-links ul{
+    list-style: none;
+    padding: 0;
+    margin: 10px;
+    margin-bottom: 1.5rem;
+    margin-right: 0;
+    display: flex;
+}
+
+.footer-links nav ul {
+    margin-left: 5rem;
+}
+
+.footer-socials ul {
+    margin-left: 15rem;
+}
+
+.footer-links li {
+    margin: 0 20px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+    color: #e74c3c;
+}
