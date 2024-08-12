@@ -1,2 +1,2 @@
 # Bula-Rentals
-## This repository is for creating a Bula rentals website
+This repository is for creating a Bula rentals website
