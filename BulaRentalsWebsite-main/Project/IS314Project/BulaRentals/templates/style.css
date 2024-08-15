@@ -1,0 +1,1243 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li, form, label {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header styling */
+header {
+    background: #fefbfb;
+    color: #0f0f0f;
+    padding: 0.5rem 0;
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+    position: relative;
+}
+
+/*Header Logo space from the left side of the section*/
+.logo {
+    margin-left: 70px;
+}
+
+/*Header Logo image size*/
+.logo img {
+    height: 80px;
+}
+
+/*Settings for the informations on the right side of the header section*/
+.header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 0px;
+}
+
+/*User reg styling*/
+.user-registration {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.user-reg {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.user-reg li {
+    margin: 0 10px;
+    padding: 3px 10px;
+}
+
+.user-reg li a {
+    text-decoration: none;
+    border-radius: 4rem;
+    background-color: #ccc;
+    padding: 0.1rem 2rem;
+    color: #1e201d;
+    font-size: 0.7rem;
+    display: block;
+}
+
+.user-reg li a:hover {
+    text-decoration: underline;
+    color: #e74c3c;
+}
+
+/*Navigation Links styling*/
+.nav-links {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 10px;
+    padding: 3px 10px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #323131;
+    font-size: 0.8rem;
+    display: block;
+}
+
+.nav-links li a:hover {
+    text-decoration: underline;
+    color: #e74c3c;
+}
+
+/* Hero section styling */
+.hero-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(aston-martin-hire-nz-rental-header-2589.jpg) no-repeat center center/cover;
+    width: 100%;
+    height: 600px;
+}
+
+.hero-content{
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h1{
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    background: transparent;
+    margin: auto;
+    display: flex;
+}
+
+.form-container form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.form-group:nth-child(5){
+    grid-column: span 4;
+}
+
+.form-group {
+    display: inline-block;
+    flex-direction: column;
+}
+
+.form-container form label {
+    color: #fefcfc;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    margin-left: 30px;
+}
+
+.form-container form input,
+.form-container form select {
+    margin-top: 15px ;
+    padding: 10px;
+    border-radius: 40px;
+    border: none;
+    font-size: 15px;
+}
+
+.btn-primary {
+    grid-column: 2 / span 2;
+    padding: 10px 0;
+    font-size: 1.1rem;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* about-us for homepage styling */
+
+.about-section
+{
+    background-color: #d9d9d90f;
+}
+
+.about-section h1 {
+    font-size: 2em;
+    color: #e74c3c;
+}
+
+.about-section p {
+    text-indent: 2%;
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    padding-bottom: 40px;
+}
+
+.about-section p1 {
+    text-indent: 2%;
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    padding-bottom: 40px;
+}
+
+.about-section h2 {
+    font-size: 2em;
+}
+
+.about-section h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-indent: 1%;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+/* Section styling */
+section {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.services-section, .contact-section {
+    background: #fff;
+}
+
+.services-section h1 {
+    color: #e74c3c;
+    font-size: 2rem;
+}
+.services-section h2, .about-section h2, .contact-section h2 {
+    margin-bottom: 1.5rem;
+}
+
+/* Services section styling */
+
+.services-section h2 {
+    margin-bottom: 1.5rem;
+}
+
+.services-section h3 {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.car img {
+    max-width: 100%;
+    height: 250px;
+    margin-bottom: 0.5rem;
+    border-radius: 15px;
+}
+
+.car {
+    display: inline-block; /* Align items horizontally */
+    width: 30%;
+    margin: 0 10px; /* Space between items */
+    vertical-align: top;
+    padding: 2rem 0;
+}
+
+.car h4 {
+    font-size: small;
+    text-align: left;
+    color: #e74c3c;
+}
+
+.car h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.car p {
+    text-align: left;
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 8%;
+}
+
+/* Hover effect for car boxes */
+.car:hover {
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 8px rgba(252, 245, 245, 0.1);
+    cursor: pointer;
+}
+
+.servicebook-btn, .viewfleetservice-btn {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.servicebook-btn {
+    background-color: #f41313;
+    color: #fff;
+    padding: 0.8rem 1rem;
+    border: none;
+    justify-items: auto;
+    cursor: pointer;
+    text-align: center;
+}
+
+.servicebook-btn:hover {
+    background-color: #0f0f0f;
+    color: #fff;
+}
+
+.viewfleetservice-btn {
+    background-color: transparent;
+    color: #f41313;
+    border-color: #cd2424bf;
+    margin-left: 30px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.viewfleetservice-btn:hover {
+    background-color: #f41313;
+    color: #fff;
+    border-color: #c10d0d;
+}
+
+/*Feedback Section styling*/
+.Feedback-Section {
+    background-color: #d4d0d000;
+}
+
+.Feedback-Section h1{
+    color: #f41313;
+    font-size: 2em;
+}
+
+.Feedback-Section h2 {
+    font-size: 2em;
+}
+
+.Feedback-Section p {
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    margin-bottom: 3em;
+}
+
+.cl-feedback img {
+    background: transparent;
+    max-width: 20%;
+    height: 50px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 15px;
+}
+
+.cl-feedback {
+    display: inline-block; /* Align items horizontally */
+    width: 30%;
+    margin: 0 10px; /* Space between items */
+    margin-bottom: 4rem;
+    margin-right: 5rem;
+    margin-left: 5rem;
+    text-align: center;
+    vertical-align: top;
+}
+
+.cl-feedback p {
+    text-align: left;
+}
+
+.cl-feedback h3 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.cl-feedback:hover {
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.445);
+    cursor: pointer;
+}
+
+.contact-section {
+    display: flex;
+    background-color: #fff;
+    max-width: 150rem;
+    box-shadow: 0 4px 8px rgb(174, 168, 168);
+    text-align: center;
+}
+
+.contact-image img {
+    width: 60%;
+    height: 100%;
+    margin-left: 2rem;
+}
+
+.contact-details {
+    text-align: center;
+    margin-left: 25em;
+    margin-bottom: 2%;
+}
+
+.contact-details h1 {
+    font-size: 2rem;
+    color: #ee1010;
+}
+
+.contact-details h2 {
+    font-size: 2rem;
+    color: #171616;
+}
+
+.contact-details p {
+    margin: 0.5rem 0;
+}
+
+.contact-details a {
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+.contact-button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.contact-button:hover {
+    background-color: #c10d0d;
+}
+
+form styling 
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    margin-bottom: 0.5rem;
+}
+
+form input, form select, form textarea {
+    width: 80%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #555;
+}
+
+
+/*Reservation section styling*/
+
+/*Reservation Header Section */
+.Reservation-header-section {
+    background-image: url('reservationpage.webp');
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    color: #8b8686;
+    text-align: center;
+}
+
+.Reservation-header-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight:900;
+}
+
+.Reservation-header-content p {
+    font-size: 1.25rem;
+    color: #161414;
+}
+
+.reservation-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(153, 205, 50, 0.053);
+    width: 100%;
+    height: 500px;
+}
+
+.reservation-form-container {
+    margin: auto;
+    display: flex;
+}
+
+.reservation-form-container form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.reservation-form-group:nth-child(5){
+    grid-column: span 4;
+}
+
+.reservation-form-group {
+    display: inline-block;
+    flex-direction: column;
+}
+
+.reservation-form-container form label {
+    color: #131111;
+    margin-bottom: 5px;
+}
+
+.reservation-form-container form input,
+.reservation-form-container form select {
+    margin-top: 5px ;
+    padding: 10px;
+    border-radius: 40px;
+    border: none;
+    font-size: 15px; /* Adjust the font size as needed */
+}
+
+.btn-primary {
+    grid-column: 2, 3;
+    padding: 7px 0px;
+    font-size: small;
+    background-color: red;
+    margin-left: 30%;
+    margin-right: 30%;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.assistance-section {
+    background-color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.assistance-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.assistance-section .title {
+    margin-bottom: 50px;
+}
+
+.assistance-section h2 {
+    font-family: arial black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.assistance-section .content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.assistance-section .column {
+    flex: 1;
+    min-width: 250px;
+}
+
+.assistance-section h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.assistance-section p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .assistance-section .content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/*About us styling*/
+
+.about-us-section {
+    padding: 40px;
+}
+
+.about-us-container, .mission-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.about-us-container .about-us-text, .mission-container .mission-text {
+    max-width: 50%;
+}
+
+.about-us-container .about-us-image, .mission-container .mission-image {
+    max-width: 45%;
+}
+
+.about-us-container .about-us-image img, .mission-container .mission-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.about-us-text h2, .mission-text h2 {
+    font-family: Arial black;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: justify;
+}
+
+.about-us-text p, .mission-text p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #d9534f;
+    color: #d9534f;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #d9534f;
+    color: #fff;
+}
+
+.aboutus-services-section {
+    padding: 40px;
+    text-align: center;
+    background-color: white;
+}
+
+.aboutus-services-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #8b8686;
+}
+
+.aboutus-service-item {
+    max-width: 25%;
+    text-align: center;
+}
+
+.aboutus-service-item img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.aboutus-service-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.aboutus-service-item p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.aboutus-pricing-container {
+    background-color: #fefdfd;
+    display: flex;
+    padding: auto;
+}
+
+.aboutus-pricing-container h2 {
+    font-size: 2em;
+    font-family: Arial black;
+    text-transform: uppercase;
+    margin: 40px 0px 20px;
+    margin-left: 50px;
+    margin-right: 5em;
+    color: #333;
+    text-align: left;
+    display: flex;
+    width: 80em;
+}
+
+.aboutus-pricing-container p {
+    color: #555;
+    margin: 50px 0 20px;
+    margin-right: 4em;
+    text-align: justify;
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.aboutus-fleet-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.aboutus-fleet-container img {
+    width: 30%;
+    height: auto;
+    margin: 0 10px;
+}
+
+.aboutus-cta-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.aboutus-cta-container p {
+    font-size: 1em;
+    margin-top: 15px;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.aboutus-cta-container .btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #d9534f;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.aboutus-cta-container .btn:hover {
+    background-color: #c9302c;
+}
+
+/*Fleet section styling*/
+
+/*Fleet Header Section */
+.fleet-header-section {
+    background-color: #ccc;
+    display: flex;
+    padding: auto;
+}
+
+.fleet-header-section h2 {
+    font-size: 1.8em;
+    margin: 10px 0 20px;
+    font-family: Arial black;
+    text-transform: uppercase;
+    margin-left: 2em;
+    margin-right: 3em;
+    color: #333;
+    text-align: left;
+    width: 25em;
+}
+
+.fleet-header-section p {
+    color: #555;
+    margin: 20px 0 20px;
+    text-align: justify;
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 40em;
+    margin-right: 2em;
+}
+
+.fleet-section {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.vehicle {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.vehicle-image {
+    flex: 1;
+    max-width: 100px;
+    padding: 10px;
+    margin-right: 20em;
+}
+
+.vehicle-image img {
+    width: 20em;
+    height: 20em;
+}
+
+.vehicle-details {
+    flex: 2;
+    padding: 20px;
+    max-width: 600px;
+}
+
+.vehicle-type {
+    background-color: #c00;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 0.875rem;
+    margin-bottom: 10px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.vehicle-name {
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.vehicle-info {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.vehicle-info li {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.vehicle-description {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.book-btn {
+    background-color: #c00;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.vehicle-price {
+    text-align: right;
+    padding: 20px;
+    flex: 1;
+    max-width: 150px;
+}
+
+.vehicle-price p {
+    margin: 0;
+}
+
+.price {
+    font-size: 1.75rem;
+    color: #c00;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .vehicle {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .vehicle-image, .vehicle-details, .vehicle-price {
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .vehicle-price {
+        text-align: right;
+        align-self: flex-end;
+    }
+}
+
+
+/* Footer styling */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 2rem 0;
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+    position: relative;
+}
+
+.footer-logo {
+    margin-left: 20px;
+}
+
+.footer-logo img {
+    height: 80px;
+}
+
+.footer-logo p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+    color: #fff;
+    width: 25em;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 0px;
+}
+
+.footer-right p {
+    margin-right: 38rem;
+    font-size: x-small;
+}
+
+.footer-infos {
+    margin-bottom: 20px;
+}
+
+.footer-contact {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.footer-contact li {
+    margin: 0 10px;
+    padding: 3px 10px;
+}
+
+.footer-contact li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 70%;
+    display: block;
+}
+
+.footer-contact li a:hover {
+    color: #e74c3c;
+}
+
+.footer-nav-links {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.footer-nav-links li {
+    margin: 0 10px;
+    padding: 3px 10px;
+    align-items: flex-end;
+}
+
+.footer-nav-links a {
+    text-decoration: none;
+    color: #fcf9f9;
+    font-size: 70%;
+    display: block;
+}
+
+.footer-nav-links li a:hover {
+    color: #e74c3c;
+}
+
+.footer-socials {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 50px;
+    display: flex;
+}
+
+.footer-socials a {
+    text-decoration: none;
+    color: #fcf9f9;
+    font-size: 70%;
+    display: block;
+    margin: 0 10px;
+    padding: 3px 10px;
+    align-items: flex-end;
+}
+
+.footer-socials a:hover {
+    color: #e74c3c;
+}
+
+/*My Booking styling*/
+
+/*Booking Header Section */
+.Booking-header-section {
+    background-image: url('managebookingpage.webp');
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.Booking-header-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.Booking-header-content p {
+    font-size: 1.25rem;
+}
+
+.Booking-image {
+    background-color: white;
+}
+.Booking-form-container p {
+    margin-bottom: 20px;
+    background-color: #8b868612;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: medium;
+}
+
+.Booking-form-container {
+    display: inline-block;
+}
+
+.Booking-form-container button {
+    background-color: #ff0000;
+    color: #101010;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: small;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Booking-form-container button:hover {
+    background-color: #f0ebeb;
+}
+
+/*Contact-us styling*/
+
+/* Contact Us Header Section */
+.contact-header-section {
+    background-image: url('contactusspage.webp');
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.contact-header-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.contact-header-content p {
+    font-size: 1.25rem;
+}
+
+/* Contact Form Section */
+.contact-form-section { 
+    background-color: #fff; 
+    padding: 50px 0;
+}
+
+.contact-form-container { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    max-width: 1200px; 
+    margin: auto; 
+    padding: 20px;
+}
+
+.contact-form-container form { 
+    flex-basis: 50%; 
+}
+
+.input-row { 
+    display: flex; 
+    margin-bottom: 10px;
+}
+
+.input-row input, 
+.input-row textarea { 
+    width: 100%; 
+    padding: 10px; 
+    margin: 5px; 
+    border: 1px solid #ccc;
+    border-radius: 3px; 
+    font-size: 1rem; 
+}
+
+.checkbox-row { 
+    display: flex; 
+    align-items: center; 
+    margin: 10px 0; 
+    text-align: justify;
+    padding: 10px 0 1px;
+    padding-left: 10px;
+    border-radius: 3px;
+    background-color: #8b868627;
+}
+
+.checkbox-row input { 
+    margin-right: 2px; 
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.checkbox-row label {
+    font-size: 14px;
+    color:#333;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.send-btn,
+.clear-btn {
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.send-btn {
+    background-color: rgb(240, 34, 34);
+    color: #fff;
+}
+
+.send-btn:hover{
+    background-color: #0f0f0f;
+    color: white;
+}
+
+.clear-btn {
+    background-color: transparent;
+    color: #c00;
+    border: 1px solid #c00;
+}
+
+.clear-btn:hover{
+    background-color: red;
+    color: white;
+}
+
+.contact-info {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center; 
+    text-align: justify;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+
+.icon-map::before,
+.icon-phone::before,
+.icon-email::before { 
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.icon-map::before {
+    background-image: url('map-x.svg');
+}
+
+.icon-phone::before {
+    background-image: url('phone-x-.svg');
+}
+
+.icon-email::before {
+    background-image: url('email-x-.svg');
+}
+
+.info-item p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.2;
+}
