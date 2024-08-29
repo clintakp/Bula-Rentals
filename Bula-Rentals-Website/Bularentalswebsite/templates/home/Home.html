@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+
+{%load static%}
+{%block content %}
+    <section id="home" class="hero-image">
+        <div class="hero-content">
+            <h1> RENT A CAR! </h1>        
+            <div class="form-container">
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="pickup_date"><i class="fa fa-calendar"></i> Pick-up Date</label>
+                        <input type="date" id="pickup_date" name="pickup_date" required>
+                     </div>
+                    <div class="form-group">
+                        <label for="pickup_time"><i class="fa fa-clock"></i> Pick-up Time</label>
+                        <input type="time" id="pickup_time" name="pickup_time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="return_date"><i class="fa fa-calendar"></i> Return Date</label>
+                        <input type="date" id="return_date" name="return_date">
+                    </div>
+                    <div class="form-group">
+                        <label for="return_time"><i class="fa fa-clock"></i> Return Time</label>
+                        <input type="time" id="return_time" name="return_time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="car-type">Car Type</label>
+                        <select id="car-type" name="car-type">
+                        <option value="sedan">Sedan</option>
+                        <option value="suv">SUV</option>
+                        <option value="truck">Truck</option>
+                        <option value="van">Van</option>
+                        </select>                        
+                    </div>
+                    <button type="submit" class="btn-primary">Make a Reservation</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <h1> ____________</h1>
+        <h2>ABOUT US</h2>
+        <p> At Bula Rentals, we are passionate about providing exceptional car rental services to make your journey through Fiji unforgettable. Established with a vision to offer a unique and hassle-free rental experience, we take pride in standing out from the competition by offering a diverse fleet of vehicles, unparalleled customer service, and an unwavering commitment to convenience.</p>
+        <h3> Our Commitment to You </h3>
+        <p> At Bula Rentals, our mission is to provide you with a reliable, enjoyable, and worry-free rental experience. We continuously strive to improve our services and exceed your expectations. When you choose Bula Rentals, you choose a company that values your time, comfort, and peace of mind.</p>
+        <p1> Thank you for choosing Bula Rentals. We look forward to being a part of your adventure </p1>
+               
+    </section>
+
+    <section id="services" class="services-section">
+        <h1> ____________</h1>
+        <h2>OUR SERVICES/OFFERS</h2>
+        <div class="car">
+            <img src="{% static 'Images/Sedan.webp' %}" alt="Car">
+            <h3>Daily Rentals</h3>
+            <h4>now $60 per day </h4>
+            <p>Rent for a day and save big with our daily specials! Book Now and enjoy a stress-free drive today!</p>
+        </div>
+        <div class="car">
+            <img src="{% static 'Images/suv.webp' %}" alt="Car">
+            <h3>Weekend Offer </h3>
+            <h4>now $200 per weekend </h4>
+            <p>Take a break from the hustle and bustle with our weekend getaway package. Book now and get ready for an adventure!</p>
+        </div>
+        <div class="car">
+            <img src="{% static 'Images/ranger_lrg.jpg' %}" alt="Car">
+            <h3>Weekly Rentals </h3>
+            <h4>now $500 per week </h4>
+            <p>Drive in style with our weekly rental deals. Book your next vacation today and enjoy the freedom of the open road!</p>
+        </div>
+        <div>
+            <button type="submit" class="servicebook-btn" > Book Now </button> 
+            <button type="submit" class="viewfleetservice-btn" > View Fleet </button>
+        </div> 
+    </section>
+
+    <section class="Feedback-Section">
+        <h1> ____________</h1>
+        <h2>REVIEWS</h2>
+        <p> Read what our customers have to say about our vehicles and services. </p>
+            <div class="cl-feedback">
+                <img src="{% static 'Images/profile head.jpg' %}" alt="profilepic">
+                <p>I've been using Bula Rentals for all my business trips for the past year and I couldn't be happier. The cars are always in top condition and the staff is incredibly helpful and friendly. I highly recommend Bula Rentals to anyone in need of a reliable rental car.</p>
+                <h3>Ian Kumar</h3>
+            </div>
+            <div class="cl-feedback">
+                <img src="{% static 'Images/profile head.jpg' %}" alt="profilepic">
+                <p>I recently took my family on a road trip and rented a van from Bula Rentals. The experience was seamless and the van was in great condition. I will definitely be using Bula Rentals for all my future rental needs.</p>
+                <h3> Devang Rathod </h3>
+            </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+            <div class="contact-image">
+                <img src="{% static 'Images/Contact Us.jpeg' %}" alt="Contact Us Image">
+            </div>
+            <div class="contact-details">
+                <h1>____________</h1>
+                <h2>Contact Us</h2>
+                <p>Email: <a href="mailto:contact@rentacar.com">clintonemail@rentacar.com</a></p>
+                <p>Phone: <a href="tel:1234567890">+679-8007890</a></p>
+                <p>Address: Westpac Street, Laucala Beach, Suva, Fiji </p>
+                <button class="contact-button">Contact Us</button>
+            </div>
+    </section>    
+{% endblock %}

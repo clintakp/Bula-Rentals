@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+<section class="fleet-header-section">
+    <h2>COME TAKE A LOOK AT OUR AWESOME FLEET AND CHOOSE YOUR BEST OPTION!</h2>
+    <p>Our company offers a wide range of vehicles for you to choose from, including economy cars, sedans, SUVs, vans and trucks. Our service gives you peace of mind when you're on the road, knowing that help is just a phone call away.</p>
+</section>
+
+<section class="fleet-section">
+    <div class="vehicle">
+        <div class="vehicle-image">
+            <img src="{% static 'Images/mercedessclass.webp' %}" alt="Mercedes S-Class">
+        </div>
+        <div class="vehicle-details">
+            <div class="vehicle-type">Large: Premium</div>
+            <h3 class="vehicle-name">MERCEDES S-CLASS</h3>
+            <ul class="vehicle-info">
+                <li>150 miles per day, then $0.24 per extra mile</li>
+                <li>Minimum driver's age is 21</li>
+            </ul>
+            <p class="vehicle-description">
+                Premium cars for your business needs or just a luxury trip. Be stylish and elegant wherever you go. We stand by our motto of driving premium cars at reasonable prices. We offer everything you would like from a premium car rental company which contains all kinds of premium vehicles.
+            </p>
+            <p class="vehicle-description">
+                Take to the road surrounded by sophistication and luxury. Whatever the occasion, get where you're going in style with premium car rental. With some fantastic deals on offer, you’ve got the perfect excuse to upgrade. So go on – take a spin in something special!
+            </p>
+            <button class="book-btn">Book Now</button>
+        </div>
+        <div class="vehicle-price">
+            <p>Price from:</p>
+            <p class="price">$140.00</p>
+        </div>
+    </div>
+    
+    <div class="vehicle">
+        <div class="vehicle-image">
+            <img src="{% static 'Images/Opelstra.webp' %}" alt="Opel Astra"> 
+        </div>
+        <div class="vehicle-details">
+            <div class="vehicle-type">Small: Economy</div>
+            <h3 class="vehicle-name">OPEL ASTRA</h3>
+            <ul class="vehicle-info">
+                <li>100 miles per day, then $0.20 per extra mile</li>
+                <li>Minimum driver's age is 25</li>
+            </ul>
+            <p class="vehicle-description">
+                Rent an economy car for driving in crowded, downtown areas with busy traffic and tight parking spaces. Economy car rentals typically offer the best fuel efficiency. Economy cars offer enough room for the entire family yet come with the fuel efficiency of a compact vehicle.
+            </p>
+            <p class="vehicle-description">
+                Whether you plan on taking the family to a relative's house or need to rent a car at your destination airport during a business trip, an economy car rental is the way to go.
+            </p>
+            <button class="book-btn">Book Now</button>
+        </div>
+        <div class="vehicle-price">
+            <p>Price from:</p>
+            <p class="price">$65.00</p>
+        </div>
+    </div>
+</section>
+{% endblock%}
