@@ -526,8 +526,9 @@ section {
     background-size: cover;
     background-position: center;
     padding: 50px 0;
-    color: #8b8686;
+    color: #ffffff;
     text-align: center;
+    text-shadow: 2px 2px 4px rgb(100, 62, 43);
 }
 
 .Reservation-header-content h2 {
@@ -538,7 +539,8 @@ section {
 
 .Reservation-header-content p {
     font-size: 1.25rem;
-    color: #161414;
+    font-weight: 200;
+    color: #b9fdff;
 }
 
 .reservation-image {
