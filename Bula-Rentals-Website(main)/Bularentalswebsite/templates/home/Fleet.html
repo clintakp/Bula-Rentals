@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+<section class="fleet-header-section">
+    <h2>COME TAKE A LOOK AT OUR AWESOME FLEET AND CHOOSE YOUR BEST OPTION!</h2>
+    <p>Our company offers a wide range of vehicles for you to choose from, including economy cars, sedans, SUVs, vans and trucks. Our service gives you peace of mind when you're on the road, knowing that help is just a phone call away.</p>
+</section>
+
+<!--Search Form-->
+<form class = searchbuttonform method="get" action="{% url 'vehicle_search' %}" class="d-flex">
+    <input class="form-control me-2" type="text" name="q" placeholder="Search" aria-label="Search">
+    <button class="btn-outline-success" type="submit">Search</button>
+</form>  
+<!--End of Search Form-->
+
+<section class="fleet-section">
+    <div class="fleet-section-vehicle-container">
+        {% for vehicle in vehicles %}
+            <div class="vehicle">
+                <div class="vehicle-image">
+                    <img src="{% static vehicle.image_url %}" alt="{{ vehicle.brand }} {{ vehicle.model }}">
+                    <ul class="list-group list-group-horizontal w-100 mb-3 mt-4 border-top pt-3">
+                        <li class="list-group-item flex-fill d-flex align-items-center justify-content-center gap-1 p-2 border-0" title="{{ vehicle.seating_capacity }} passengers">
+                          <span class="bi bi-person-fill h3 m-0 d-flex lh-1" aria-hidden="true"></span>
+                          <span class="h5 fw-normal m-0 lh-1">{{ vehicle.seating_capacity }}</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="vehicle-details">
+                    <div class="vehicle-class">{{ vehicle.size }}: {{ vehicle.classes }}</div>
+                    <h3 class="vehicle-name">{{ vehicle.brand }} {{ vehicle.model }}</h3>
+                    <p class="vehicle-description">{{ vehicle.description }}</p>
+                    <button class="book-btn">Book Now</button>
+                </div>
+                <div class="vehicle-price">
+                    <h1>Price from:</h1>
+                    <p class="price">${{ vehicle.daily_rate }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock%}

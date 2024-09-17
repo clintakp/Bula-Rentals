@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+<section id="aboutus" class="about-us-section">
+    <div class="about-us-container">
+        <div class="about-us-text">
+            <h2>ABOUT US</h2>
+            <p>Welcome to Bula Rentals, your premier car rental service in Fiji, where we make your journey smooth and stress-free. At Bula Rentals, we pride ourselves on offering a diverse range of vehicles to suit every need, from budget-friendly options to luxurious rides and eco-friendly choices. What sets us apart is our commitment to exceptional customer service—our dedicated team ensures a seamless rental experience, so you can focus on enjoying the beauty of Fiji. Whether you're here for business or leisure, Bula Rentals is here to provide the perfect vehicle for your adventure.</p>
+            <a href="contact_us" class="btn">Come Say Hello!</a>
+        </div>
+        <div class="about-us-image">
+            <img src="{% static 'Images/rangerover.webp' %}" alt="Range Rover">
+        </div>
+    </div>
+    <div class="mission-container">
+        <div class="mission-image">
+            <img src= "{% static 'Images/Mission pic.webp' %}" alt="Car Keys">
+        </div>
+        <div class="mission-text">
+            <h2>OUR MISSION</h2>
+            <p>We provide all customers with a seamless and stress-free car rental experience. We strive to make the process of renting a car convenient and efficient! We are constantly looking for ways to improve our service, and we are working hard to stay ahead of the competition.</p>
+            <a href="contact_us" class="btn">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<section class="aboutus-services-container">
+    <div class="aboutus-service-item">
+        <img src="{% static 'Images/taxi-x-.svg'%}" alt="Fleet Selection Icon">
+        <h3>Fleet Selection</h3>
+        <p>Our company offers a wide range of vehicles for you to choose from, including economy cars, sedans, SUVs, vans, and trucks.</p>
+    </div>
+    <div class="aboutus-service-item">
+        <img src="{% static 'Images/thumbs-up-2-x-.svg' %}" alt="Roadside Assistance Icon">
+        <h3>Roadside Assistance</h3>
+        <p>Our service gives you peace of mind when you're on the road, knowing that help is just a phone call away.</p>
+    </div>
+    <div class="aboutus-service-item">
+        <img src="{% static 'Images/insurance-x-.svg' %}" alt="Insurance Icon">
+        <h3>Insurance</h3>
+        <p>Our insurance policies are designed to give you peace of mind and make your rental experience as stress-free as possible.</p>
+    </div>
+</section>
+
+<section class="aboutus-pricing-container">
+    <h2>Great Pricing, Transparent Policies, Flexible Fuel and Mileage Options.</h2>
+    <p>Don’t just take our word for it – check out our customer reviews and testimonials to see why so many people have trusted us with their rental needs. We’re here to make your trip as smooth and enjoyable as possible. So why wait? Book your rental car with us today!</p>
+</section>
+
+<section class="aboutus-services-section">
+    <div class="aboutus-fleet-container">
+        <img src= "{% static 'Images/kuga-suv.webp' %}" alt="Car 1">
+        <img src= "{% static 'Images/honda-2363-1717179591.webp' %}" alt="Car 2">
+        <img src= "{% static 'Images/Explorer.webp' %}" alt="Car 3">
+    </div>
+</section>
+
+<section class="aboutus-cta-container">
+    <p>Come take a look at our awesome fleet and choose your best option!</p>
+    <a href="fleet" class="btn">Proceed to Fleet</a>
+</section>
+{% endblock%}

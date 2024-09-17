@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+<section class="Reservation-header-section">
+    <div class="Reservation-header-content">
+        <h2>Reservation</h2>
+        <p>Choose dates and location and make a reservation.</p>
+    </div>
+</section>
+
+<section id="reservation" class="reservation-image">    
+    <div class="reservation-form-container">
+        <form action="#" method="post">
+            <div class="reservation-form-group">
+                <label for="pickup_date"><i class="fa fa-calendar"></i> Pick-up Date</label>
+                <input type="date" id="pickup_date" name="pickup_date" required>
+            </div>
+            <div class="reservation-form-group">
+                <label for="pickup_time"><i class="fa fa-clock"></i> Pick-up Time</label>
+                <input type="time" id="pickup_time" name="pickup_time" required>
+            </div>
+            <div class="reservation-form-group">
+                <label for="return_date"><i class="fa fa-calendar"></i> Return Date</label>
+                <input type="date" id="return_date" name="return_date">
+            </div>
+            <div class="reservation-form-group">
+                <label for="return_time"><i class="fa fa-clock"></i> Return Time</label>
+                <input type="time" id="return_time" name="return_time" required>
+            </div>
+            <div class="reservation-form-group">
+                <label for="car-type">Car Type</label>
+                <select id="car-type" name="car-type">
+                <option value="sedan">Sedan</option>
+                <option value="suv">SUV</option>
+                <option value="truck">Truck</option>
+                <option value="van">Van</option>
+                </select>                        
+            </div>
+                <button type="submit" class="reservationbtn-primary">Make a Reservation</button>
+        </form>
+    </div>
+</section>
+
+<section class="assistance-section">
+    <div class="container">
+        <div class="title">
+            <h2>NEED ASSISTANCE?</h2>
+        </div>
+        <div class="content">
+            <div class="column">
+                <h3>Customer care Assistance:</h3>
+                <p>tel: 321-654-0987</p>
+                <p>Monday-Sunday, 8:30 am - 8:30 pm</p>
+            </div>
+            <div class="column">
+                <h3>Reservations:</h3>
+                <p>tel: 123-456-7890</p>
+                <p>24 hours, 7 days a week</p>
+            </div>
+            <div class="column">
+                <p>We pride ourselves on our unbeatable customer service and our commitment to making the rental process as convenient as possible.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock%}

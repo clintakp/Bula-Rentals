@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+<section class="manage-booking-header-section">
+    <div class="manange-booking-header-content">
+        <h2>Manage Booking</h2>
+        <p>Login to view the details for your reservation</p>
+    </div>
+</section>
+
+<section class="manage-booking-container">
+    <div class="manage-booking-content">
+        <p class="manage-booking-instruction">Use your email address and reference ID to view reservation details.</p>
+        <form class="manage-booking-form">
+            <input type="email" class="manage-booking-input" placeholder="Email address" required>
+            <input type="text" class="manage-booking-input" placeholder="Reference ID" required>
+            <button type="submit" class="manage-booking-button">Manage</button>
+        </form>
+    </div>
+</section>
+{% endblock%}

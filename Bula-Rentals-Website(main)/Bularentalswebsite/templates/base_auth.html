@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title %} Bula rentals | Car Rental Service in Fiji {% endblock %}</title>
+    <link href="{% static 'Css/authstyle.css' %}" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/">
+                <img src="{% static 'Images/logo.png' %}" alt="Bula Rentals Logo">
+            </a>
+        </div>
+    </header>
+    <main>
+        {% block content %}
+    
+        {% endblock %}
+    </main>
+</body>
+</html>
