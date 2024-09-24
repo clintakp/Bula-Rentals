@@ -18,3 +18,12 @@ class Vehicles(models.Model):
     class Meta:
         managed = False  
         db_table = 'vehicles'
+
+class Contact(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    phone = models.CharField(max_length=15, blank=True)
+    question = models.TextField()
+
+    def __str__(self):
+        return f"Message from {self.name} - {self.email}"
