@@ -8,6 +8,7 @@ from .models import Vehicles
 from django.db.models import Q
 from django.core.paginator import Paginator
 from django.contrib import messages
+from .models import Contact
 
 # Create your views here.
 
@@ -27,9 +28,6 @@ def fleet(request):
 def My_booking(request):
     return render(request, 'home/Booking.html')
 
-def contact_us(request):
-    return render(request, 'home/contact_us.html')
-
 #Search Function
 def vehicle_search(request):
     query = request.GET.get('q')  
@@ -47,34 +45,20 @@ def vehicle_search(request):
 #contact us function
 def contact_us(request):
     if request.method == 'POST':
+        # Retrieve form data
         name = request.POST.get('name')
         email = request.POST.get('email')
         phone = request.POST.get('phone')
         question = request.POST.get('question')
 
-        # Prepare email
-        subject = 'Contact Us Form Submission'
-        message = render_to_string('contact_email_template.html', {
-            'name': name,
-            'email': email,
-            'phone': phone,
-            'question': question,
-        })
-        email_from = settings.EMAIL_HOST_USER
-        recipient_list = ['iankumar52@gmail.com']
+        # Save the form data to the Contact model
+        contact = Contact(name=name, email=email, phone=phone, question=question)
+        contact.save()
 
-        email = EmailMessage(subject, message, email_from, recipient_list)
-        email.content_subtype = 'html'
-        email.send()
+        # Redirect to success page after form submission
+        return redirect('contact_success')
 
-        return redirect('contact_success')  # Redirect to a success page or home page
-    
     return render(request, 'home/contact_us.html')
 
 def contact_success(request):
     return render(request, 'contact_success.html')
-
-#Display Fleet
-#def vehicle_list(request):
-    #vehicles = Vehicles.objects.all()
-    #return render(request, 'home/fleet.html', {'vehicles': vehicles})
