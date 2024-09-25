@@ -7,12 +7,51 @@
     <p>Our company offers a wide range of vehicles for you to choose from, including economy cars, sedans, SUVs, vans and trucks. Our service gives you peace of mind when you're on the road, knowing that help is just a phone call away.</p>
 </section>
 
-<!--Search Form-->
-<form class = searchbuttonform method="get" action="{% url 'vehicle_search' %}" class="d-flex">
-    <input class="form-control me-2" type="text" name="q" placeholder="Search" aria-label="Search">
+<!-- Search Form -->
+<form class="searchbuttonform" method="get" action="{% url 'vehicle_search' %}" class="d-flex">
+    
+    <select name="brand" class="form-control me-2">
+        <option value="">All Brands</option>
+        <option value="Honda" {% if brand_filter == 'Honda' %}selected{% endif %}>Honda</option>
+        <option value="Ford" {% if brand_filter == 'Ford' %}selected{% endif %}>Ford</option>
+        <option value="Chevrolet" {% if brand_filter == 'Chevrolet' %}selected{% endif %}>Chevrolet</option>
+        <option value="Toyota" {% if brand_filter == 'Toyota' %}selected{% endif %}>Toyota</option>
+        <option value="Nissan" {% if brand_filter == 'Nissan' %}selected{% endif %}>Nissan</option>
+        <option value="Chrisler" {% if brand_filter == 'Chrysler' %}selected{% endif %}>Chrysler</option>
+        <option value="Jeep" {% if brand_filter == 'Jeep' %}selected{% endif %}>Jeep</option>
+        <option value="Kia" {% if brand_filter == 'Kia' %}selected{% endif %}>Kia</option>
+        <option value="Hyundai" {% if brand_filter == 'Hyundai' %}selected{% endif %}>Hyundai</option>
+    </select>
+
+    <select name="model" class="form-control me-2">
+        <option value="">All Models</option>
+        <option value="Civic" {% if model_filter == 'Civic' %}selected{% endif %}>Civic</option>
+        <option value="CR-V" {% if model_filter == 'CR-V' %}selected{% endif %}>CR-V</option>
+        <option value="Explorer" {% if model_filter == 'Explorer' %}selected{% endif %}>Explorer</option>
+        <option value="Malibu" {% if model_filter == 'Malibu' %}selected{% endif %}>Malibu</option>
+        <option value="Highlander" {% if model_filter == 'Highlander' %}selected{% endif %}>Explorer</option>
+        <option value="Corolla" {% if model_filter == 'Corolla' %}selected{% endif %}>Corolla</option>
+    </select>
+
+    <select name="size" class="form-control me-2">
+        <option value="">All Sizes</option>
+        <option value="Small" {% if size_filter == 'Small' %}selected{% endif %}>Small</option>
+        <option value="Medium" {% if size_filter == 'Medium' %}selected{% endif %}>Medium</option>
+        <option value="Large" {% if size_filter == 'Large' %}selected{% endif %}>Large</option>
+    </select>
+
+    <select name="classes" class="form-control me-2">
+        <option value="">All Classes</option>
+        <option value="Economy" {% if classes_filter == 'Economy' %}selected{% endif %}>Economy</option>
+        <option value="Hybrid" {% if classes_filter == 'Hybrid' %}selected{% endif %}>Hybrid</option>
+        <option value="Premium" {% if classes_filter == 'Premium' %}selected{% endif %}>Premium</option>
+        <option value="Luxury" {% if classes_filter == 'Luxury' %}selected{% endif %}>Luxury</option>
+    </select>
+    <input class="form-control me-2" type="text" name="q" placeholder="Search" aria-label="Search" value="{{ request.GET.q }}" maxlength="50">
+
     <button class="btn-outline-success" type="submit">Search</button>
-</form>  
-<!--End of Search Form-->
+</form>
+<!-- End of Search Form -->
 
 <section class="fleet-section">
     <div class="fleet-section-vehicle-container">
