@@ -12,27 +12,24 @@
     
     <select name="brand" class="form-control me-2">
         <option value="">All Brands</option>
+        <option value="BMW" {% if brand_filter == 'BMW' %}selected{% endif %}>BMW</option>
+        <option value="Volkswagen" {% if brand_filter == 'Volkswagen' %}selected{% endif %}>Volkswagen</option>
+        <option value="Mazda" {% if brand_filter == 'Mazda' %}selected{% endif %}>Mazda</option>
+        <option value="Lexus" {% if brand_filter == 'Lexus' %}selected{% endif %}>Lexus</option>
+        <option value="Tesla" {% if brand_filter == 'Tesla' %}selected{% endif %}>Tesla</option>
+        <option value="Maserati" {% if brand_filter == 'Maserati' %}selected{% endif %}>Maserati</option>
+        <option value="Mercedes-Benz" {% if brand_filter == 'Mercedes-Benz' %}selected{% endif %}>Mercedes-Benz</option>
         <option value="Honda" {% if brand_filter == 'Honda' %}selected{% endif %}>Honda</option>
         <option value="Ford" {% if brand_filter == 'Ford' %}selected{% endif %}>Ford</option>
         <option value="Chevrolet" {% if brand_filter == 'Chevrolet' %}selected{% endif %}>Chevrolet</option>
         <option value="Toyota" {% if brand_filter == 'Toyota' %}selected{% endif %}>Toyota</option>
         <option value="Nissan" {% if brand_filter == 'Nissan' %}selected{% endif %}>Nissan</option>
-        <option value="Chrisler" {% if brand_filter == 'Chrysler' %}selected{% endif %}>Chrysler</option>
+        <option value="Chrysler" {% if brand_filter == 'Chrysler' %}selected{% endif %}>Chrysler</option>
         <option value="Jeep" {% if brand_filter == 'Jeep' %}selected{% endif %}>Jeep</option>
         <option value="Kia" {% if brand_filter == 'Kia' %}selected{% endif %}>Kia</option>
         <option value="Hyundai" {% if brand_filter == 'Hyundai' %}selected{% endif %}>Hyundai</option>
     </select>
-
-    <select name="model" class="form-control me-2">
-        <option value="">All Models</option>
-        <option value="Civic" {% if model_filter == 'Civic' %}selected{% endif %}>Civic</option>
-        <option value="CR-V" {% if model_filter == 'CR-V' %}selected{% endif %}>CR-V</option>
-        <option value="Explorer" {% if model_filter == 'Explorer' %}selected{% endif %}>Explorer</option>
-        <option value="Malibu" {% if model_filter == 'Malibu' %}selected{% endif %}>Malibu</option>
-        <option value="Highlander" {% if model_filter == 'Highlander' %}selected{% endif %}>Explorer</option>
-        <option value="Corolla" {% if model_filter == 'Corolla' %}selected{% endif %}>Corolla</option>
-    </select>
-
+    
     <select name="size" class="form-control me-2">
         <option value="">All Sizes</option>
         <option value="Small" {% if size_filter == 'Small' %}selected{% endif %}>Small</option>
