@@ -10,7 +10,6 @@ from django.core.paginator import Paginator
 from django.contrib import messages
 from .models import Contact
 
-# Create your views here.
 
 def home(request):
     return render(request, 'home/Home.html')
@@ -23,6 +22,8 @@ def about_us(request):
 
 def fleet(request):
     vehicles = Vehicles.objects.all()
+    sort_by = request.GET.get('sort', 'daily_rate')
+    vehicles = vehicles.order_by(sort_by)
     return render(request, 'home/fleet.html', {'vehicles': vehicles})
 
 def My_booking(request):
@@ -30,18 +31,49 @@ def My_booking(request):
 
 #Search Function
 def vehicle_search(request):
-    query = request.GET.get('q')  
+    query = request.GET.get('q')
+    brand_filter = request.GET.get('brand')
+    model_filter = request.GET.get('model')
+    size_filter = request.GET.get('size')
+    classes_filter = request.GET.get('classes')
+    sort_by = request.GET.get('sort', 'daily_rate')  
+
+    vehicles = Vehicles.objects.all()
+
     if query:
-        vehicles = Vehicles.objects.filter(
-            Q(brand__icontains=query)  |         # Search by brand
-            Q(model__icontains=query)            # Search by model       
+        vehicles = vehicles.filter(
+            Q(brand__icontains=query)       |         # Search by brand
+            Q(model__icontains=query)       |         # Search by model
+            Q(seating_capacity__icontains=query) |    # Search by seats
+            Q(classes__icontains=query)     |         # Search by classes
+            Q(description__icontains=query) |         # Search by description
+            Q(size__icontains=query)                  # Search by size
         )
-    else:
-        vehicles = Vehicles.objects.all() 
 
-    context = {'vehicles': vehicles}
+    if brand_filter:
+        vehicles = vehicles.filter(brand__icontains=brand_filter)
+
+    if model_filter:
+        vehicles = vehicles.filter(model__icontains=model_filter)
+
+    if size_filter:
+        vehicles = vehicles.filter(size__icontains=size_filter)
+
+    if classes_filter:
+        vehicles = vehicles.filter(classes__icontains=classes_filter)
+
+    vehicles = vehicles.order_by(sort_by)   # Sort vehicles
+
+    context = {
+        'vehicles': vehicles,
+        'brand_filter': brand_filter,
+        'model_filter': model_filter,
+        'size_filter': size_filter,
+        'classes_filter': classes_filter,
+        'sort_by': sort_by,
+    }
     return render(request, 'home/Vehicles_Search.html', context)
-
+    
 #contact us function
 def contact_us(request):
     if request.method == 'POST':
