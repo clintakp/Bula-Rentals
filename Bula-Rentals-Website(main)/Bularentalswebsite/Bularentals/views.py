@@ -33,7 +33,6 @@ def My_booking(request):
 def vehicle_search(request):
     query = request.GET.get('q')
     brand_filter = request.GET.get('brand')
-    model_filter = request.GET.get('model')
     size_filter = request.GET.get('size')
     classes_filter = request.GET.get('classes')
     sort_by = request.GET.get('sort', 'daily_rate')  
@@ -53,9 +52,6 @@ def vehicle_search(request):
     if brand_filter:
         vehicles = vehicles.filter(brand__icontains=brand_filter)
 
-    if model_filter:
-        vehicles = vehicles.filter(model__icontains=model_filter)
-
     if size_filter:
         vehicles = vehicles.filter(size__icontains=size_filter)
 
@@ -67,7 +63,6 @@ def vehicle_search(request):
     context = {
         'vehicles': vehicles,
         'brand_filter': brand_filter,
-        'model_filter': model_filter,
         'size_filter': size_filter,
         'classes_filter': classes_filter,
         'sort_by': sort_by,
